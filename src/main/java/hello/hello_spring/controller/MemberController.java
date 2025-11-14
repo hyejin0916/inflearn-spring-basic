@@ -20,6 +20,7 @@ public class MemberController {
     @Autowired // Autowired를 사용하면 스프링 컨테이너에 있는 멤버 서비스를 가져와서 연결 시켜줌
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+        System.out.println("memberService: " + memberService.getClass());
     }
 
     @GetMapping("/members/new")
